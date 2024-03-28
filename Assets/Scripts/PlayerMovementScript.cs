@@ -7,7 +7,7 @@ public class PlayerMovementScript : MonoBehaviour
     // It is "pseudo public"
     // HorizontalPlayerAcceleration indicates how fast we accelerate Horizontally
     [SerializeField]
-    private float f_horPlayAccel = 5000f;
+    private float speed = 5000f;
 
     private Rigidbody2D OURRigidbody;
 
@@ -20,14 +20,9 @@ public class PlayerMovementScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void HorizontalMovement(float HorizontalInput)
     {
-        float HorizontalInput = Input.GetAxis("Horizontal");
-
-        if (HorizontalInput != 0.0f)
-        {
-            Vector2 ForceToAdd=Vector2.right*HorizontalInput*f_horPlayAccel*Time.deltaTime;
-            OURRigidbody.AddForce(ForceToAdd);
-        }
+        Vector2 ForceToAdd = Vector2.right * HorizontalInput * speed * Time.deltaTime;
+        OURRigidbody.AddForce(ForceToAdd);
     }
 }

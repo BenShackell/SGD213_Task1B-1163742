@@ -22,7 +22,7 @@ public class ShootingScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (Input.GetButton("Fire1"))
         {
@@ -39,6 +39,21 @@ public class ShootingScript : MonoBehaviour
             }
 
             //print("Shoot!");
+        }
+    }*/
+
+    public void Shoot()
+    {
+        float CurrentTime = Time.time;
+
+        // Have a delay so we don't shoot too many bullets
+        if (CurrentTime - lastFiredTime > fireDelay)
+        {
+            Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y + bulletOffset);
+
+            Instantiate(bullet, spawnPosition, transform.rotation);
+
+            lastFiredTime = CurrentTime;
         }
     }
 
