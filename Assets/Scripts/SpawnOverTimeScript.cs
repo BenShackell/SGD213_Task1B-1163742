@@ -3,7 +3,6 @@ using System.Collections;
 
 public class SpawnOverTimeScript : MonoBehaviour
 {
-
     // Object to spawn
     [SerializeField]
     private GameObject spawnObject;

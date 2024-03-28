@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyMoveForward : MonoBehaviour {
-
+/*public class EnemyMoveForward : MonoBehaviour
+{
     private float acceleration = 75f;
 
     private float initialVelocity = 2f;
@@ -25,3 +25,4 @@ public class EnemyMoveForward : MonoBehaviour {
         ourRigidbody.AddForce(ForceToAdd);
     }
 }
+*/
