@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Drawing;
 
 public class Movement : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 ForceToAdd = new Vector2(0f, Y * acceleration * Time.deltaTime);
+        Vector2 ForceToAdd = new Vector2(0f, acceleration * Time.deltaTime);
 
         ourRigidbody.AddForce(ForceToAdd);
     }

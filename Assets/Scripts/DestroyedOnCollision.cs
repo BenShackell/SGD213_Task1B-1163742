@@ -10,7 +10,6 @@ public enum TagListType
 
 public class DestroyedOnCollision : MonoBehaviour
 {
-
     [SerializeField]
     private TagListType tagListType = TagListType.Blacklist;
 
